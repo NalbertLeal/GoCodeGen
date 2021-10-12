@@ -2,7 +2,7 @@
 
 Golang is an awesome language, the std library have a lot of modules writen to help us to develop fast and reliable code. But of course go isn't perfect. Some times golang can be repetitive or/and verbose because of the use of some practices. For example:
 
-Image a situation that you want to use a linked list instead of an array, fine, golang have **container/list**, that implementation of linked list is fine enoth to most of the situations, but it uses **interface{}** as the list type, so the list can hold any value we need. That's the go default aproach to write code that may need to support multiple types.
+Image a situation that you want to use a linked list instead of an array, fine, golang have `container/list`, that implementation of linked list is fine enoth to most of the situations, but it uses `interface{}` as the list type, so the list can hold any value we need. That's the go default aproach to write code that may need to support multiple types.
 
 That cause the follow code to show quite often into the code:
 
@@ -16,7 +16,7 @@ if err != nil {
 firstValue := fisrtNode.(int)
 ```
 
-So its nescessary to make a conversion every time we receive a value from the list because the use of interface{}.
+So its nescessary to make a conversion every time we receive a value from the list because the use of `interface{}`.
 
 To avoid this we can write our own struct IntList that wrap a `container/list` and write methods that return the values as integers:
 
@@ -44,7 +44,7 @@ type {{.list_name}}List struct {
 }
 
 func (il *{{.list_name}}List) Front() ({{.list_type}}, error) {
-  value, err := il.l,Front()
+  value, err := il.l.Front()
   if err != nil {
     return 0, err
   }
