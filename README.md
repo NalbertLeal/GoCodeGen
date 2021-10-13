@@ -71,7 +71,7 @@ $ GoCodeGen ./gen/list.gen.go float --list_name Float --list_type float
 $ GoCodeGen ./gen/list.gen.go string --list_name String --list_type string
 ```
 
-Here in the first command `./gen/list.gen.go` (the `./` is obrigatory to indicate that that's a relative path) is the template file path, `int` is the file result prefix and the arguments with `--` is the name of the template variable and the next argument the value of this template variable.
+Here in the first command: `./gen/list.gen.go` is the template file path (the `./` is obrigatory to indicate that's a relative path), `int` is the file result prefix and the arguments with `--` is the name of the template variable and the next argument the value of this template variable.
 
 Now we have three files with the correct names and types. The result is writen into files with the same name but with the prefix passed as parameter in front of the current file name. So we have the files `int_list.gen.go`, `float_list.gen.go` and `string_list.gen.go`.
 
